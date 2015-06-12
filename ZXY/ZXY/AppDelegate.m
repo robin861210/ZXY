@@ -17,7 +17,21 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:YES];
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.backgroundColor = [UIColor whiteColor];
+
+    [self enterHomeViewController];
+    
     return YES;
+}
+
+- (void)enterHomeViewController {
+    MainViewController *mainViewController = [[MainViewController alloc] init];
+//    CustomNavigationController *navigation = [[CustomNavigationController alloc] initWithRootViewController:loginVC];
+    self.window.rootViewController = mainViewController;
+    [self.window makeKeyAndVisible];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
