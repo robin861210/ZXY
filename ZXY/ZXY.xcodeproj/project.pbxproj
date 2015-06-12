@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F2952B41B2AE30500E8B524 /* list_ed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F2952B21B2AE30500E8B524 /* list_ed@2x.png */; };
+		0F2952B51B2AE30500E8B524 /* list@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F2952B31B2AE30500E8B524 /* list@2x.png */; };
 		0F84C1751B2AA66100804043 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F84C1741B2AA66100804043 /* main.m */; };
 		0F84C1781B2AA66100804043 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F84C1771B2AA66100804043 /* AppDelegate.m */; };
 		0F84C17B1B2AA66100804043 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F84C17A1B2AA66100804043 /* ViewController.m */; };
@@ -15,6 +17,9 @@
 		0F84C18F1B2AA66100804043 /* ZXYTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F84C18E1B2AA66100804043 /* ZXYTests.m */; };
 		0F84C1991B2AAA8A00804043 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F84C1981B2AAA8A00804043 /* Images.xcassets */; };
 		0F84C1BD1B2AB4DD00804043 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F84C1BC1B2AB4DD00804043 /* MainViewController.m */; };
+		0F84C1C41B2AC9E000804043 /* DDMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F84C1C31B2AC9E000804043 /* DDMenuController.m */; };
+		0F84C1C71B2ACAF700804043 /* CustomNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F84C1C61B2ACAF700804043 /* CustomNavigationController.m */; };
+		0F84C1CA1B2ACCA300804043 /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F84C1C91B2ACCA300804043 /* LeftViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +33,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F2952B21B2AE30500E8B524 /* list_ed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "list_ed@2x.png"; sourceTree = "<group>"; };
+		0F2952B31B2AE30500E8B524 /* list@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "list@2x.png"; sourceTree = "<group>"; };
 		0F84C16F1B2AA66100804043 /* ZXY.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZXY.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F84C1731B2AA66100804043 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0F84C1741B2AA66100804043 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -43,6 +50,13 @@
 		0F84C1981B2AAA8A00804043 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		0F84C1BB1B2AB4DD00804043 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		0F84C1BC1B2AB4DD00804043 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		0F84C1C21B2AC9E000804043 /* DDMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDMenuController.h; sourceTree = "<group>"; };
+		0F84C1C31B2AC9E000804043 /* DDMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDMenuController.m; sourceTree = "<group>"; };
+		0F84C1C51B2ACAF700804043 /* CustomNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomNavigationController.h; sourceTree = "<group>"; };
+		0F84C1C61B2ACAF700804043 /* CustomNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomNavigationController.m; sourceTree = "<group>"; };
+		0F84C1C81B2ACCA300804043 /* LeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftViewController.h; sourceTree = "<group>"; };
+		0F84C1C91B2ACCA300804043 /* LeftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftViewController.m; sourceTree = "<group>"; };
+		0F84C1CB1B2ADC0500804043 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +106,8 @@
 				0F84C1B91B2AB44700804043 /* ViewControllers */,
 				0F84C1761B2AA66100804043 /* AppDelegate.h */,
 				0F84C1771B2AA66100804043 /* AppDelegate.m */,
+				0F84C1C21B2AC9E000804043 /* DDMenuController.h */,
+				0F84C1C31B2AC9E000804043 /* DDMenuController.m */,
 				0F84C1791B2AA66100804043 /* ViewController.h */,
 				0F84C17A1B2AA66100804043 /* ViewController.m */,
 				0F84C17C1B2AA66100804043 /* Main.storyboard */,
@@ -107,6 +123,7 @@
 			children = (
 				0F84C1731B2AA66100804043 /* Info.plist */,
 				0F84C1741B2AA66100804043 /* main.m */,
+				0F84C1CB1B2ADC0500804043 /* PrefixHeader.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -131,6 +148,8 @@
 		0F84C1B51B2AB41200804043 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				0F2952B21B2AE30500E8B524 /* list_ed@2x.png */,
+				0F2952B31B2AE30500E8B524 /* list@2x.png */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -138,6 +157,8 @@
 		0F84C1B61B2AB44700804043 /* General */ = {
 			isa = PBXGroup;
 			children = (
+				0F84C1C51B2ACAF700804043 /* CustomNavigationController.h */,
+				0F84C1C61B2ACAF700804043 /* CustomNavigationController.m */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -161,6 +182,8 @@
 			children = (
 				0F84C1BB1B2AB4DD00804043 /* MainViewController.h */,
 				0F84C1BC1B2AB4DD00804043 /* MainViewController.m */,
+				0F84C1C81B2ACCA300804043 /* LeftViewController.h */,
+				0F84C1C91B2ACCA300804043 /* LeftViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -253,8 +276,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F84C1991B2AAA8A00804043 /* Images.xcassets in Resources */,
+				0F2952B51B2AE30500E8B524 /* list@2x.png in Resources */,
 				0F84C17E1B2AA66100804043 /* Main.storyboard in Resources */,
 				0F84C1831B2AA66100804043 /* LaunchScreen.xib in Resources */,
+				0F2952B41B2AE30500E8B524 /* list_ed@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,8 +298,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F84C17B1B2AA66100804043 /* ViewController.m in Sources */,
+				0F84C1C41B2AC9E000804043 /* DDMenuController.m in Sources */,
 				0F84C1781B2AA66100804043 /* AppDelegate.m in Sources */,
 				0F84C1751B2AA66100804043 /* main.m in Sources */,
+				0F84C1CA1B2ACCA300804043 /* LeftViewController.m in Sources */,
+				0F84C1C71B2ACAF700804043 /* CustomNavigationController.m in Sources */,
 				0F84C1BD1B2AB4DD00804043 /* MainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -342,6 +370,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREFIX_HEADER = ZXY/PrefixHeader.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -384,6 +413,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = ZXY/PrefixHeader.pch;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -402,6 +432,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PREFIX_HEADER = ZXY/PrefixHeader.pch;
 				INFOPLIST_FILE = ZXY/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -414,6 +445,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PREFIX_HEADER = ZXY/PrefixHeader.pch;
 				INFOPLIST_FILE = ZXY/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -474,6 +506,7 @@
 				0F84C1941B2AA66100804043 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0F84C1951B2AA66100804043 /* Build configuration list for PBXNativeTarget "ZXYTests" */ = {
 			isa = XCConfigurationList;
@@ -482,6 +515,7 @@
 				0F84C1971B2AA66100804043 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

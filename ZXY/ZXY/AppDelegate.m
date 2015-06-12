@@ -18,7 +18,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    //自定义启动方式
+    //自定义启动方式.
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:YES];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
@@ -29,9 +29,20 @@
 }
 
 - (void)enterHomeViewController {
-    MainViewController *mainViewController = [[MainViewController alloc] init];
-//    CustomNavigationController *navigation = [[CustomNavigationController alloc] initWithRootViewController:loginVC];
-    self.window.rootViewController = mainViewController;
+    //初始化首页
+    MainViewController *mainVC = [[MainViewController alloc] init];
+    [mainVC setTitle:@"首页"];
+    //初始化导航条
+    CustomNavigationController *navigation = [[CustomNavigationController alloc] initWithRootViewController:mainVC];
+    //初始化侧滑分屏
+    DDMenuController *rootController = [[DDMenuController alloc] initWithRootViewController:navigation];
+    _menuController = rootController;
+    //初始化左侧分屏
+    LeftViewController *leftVC = [[LeftViewController alloc] init];
+    rootController.leftViewController = leftVC;
+
+    self.window.rootViewController = rootController;
+    self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
 }
 

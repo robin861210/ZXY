@@ -8,10 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import "MainViewController.h"
+#import "CustomNavigationController.h"
+#import "DDMenuController.h"
+#import "LeftViewController.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic)DDMenuController *menuController;
 
 - (void)enterHomeViewController;
 
