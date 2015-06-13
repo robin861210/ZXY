@@ -24,7 +24,7 @@
     listNameArray = @[@"装修档案",@"装修日记",@"装修计算器",@"优惠活动",@"积分商城",@"投诉建议",@"意见反馈",@"设置"];
     
     UIImageView *backgImgView = [[UIImageView alloc] initWithFrame:self.view.bounds];
-    [backgImgView setImage:LoadImage(@"center_back@2x", @"png")];
+    [backgImgView setImage:LoadImage(@"center_back@2x", @"jpg")];
     [self.view addSubview:backgImgView];
 
     [self setPersonCenterView];
