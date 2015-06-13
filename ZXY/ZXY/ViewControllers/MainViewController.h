@@ -7,7 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TabBarView.h"
+#import "HomeView.h"
 
-@interface MainViewController : UIViewController
+
+@interface MainViewController : UIViewController<TabBarViewDelegate,HomeDelegate>
+{
+    UIView *tmpView;
+    TabBarView *tabBarView;
+    NSArray *tabArray;
+    
+    HomeView *homeView;
+    
+    NSInteger switchIndex;
+}
 
 @end
