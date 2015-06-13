@@ -19,6 +19,9 @@
     // Do any additional setup after loading the view.
     [self.view setBackgroundColor:[UIColor whiteColor]];
     
+    if ([UIDevice currentDevice].systemVersion.floatValue >= 7) {
+        self.edgesForExtendedLayout = UIRectEdgeNone;
+    }
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(push:) name:@"pushToFunctionVC" object:nil];
     
     tmpView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight-50-64*ScreenHeight/568)];
