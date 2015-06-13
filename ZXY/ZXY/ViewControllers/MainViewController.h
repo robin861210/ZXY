@@ -10,7 +10,6 @@
 #import "TabBarView.h"
 #import "HomeView.h"
 
-
 @interface MainViewController : UIViewController<TabBarViewDelegate,HomeDelegate>
 {
     UIView *tmpView;
@@ -21,5 +20,6 @@
     
     NSInteger switchIndex;
 }
+
 
 @end

@@ -18,6 +18,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self.view setBackgroundColor:[UIColor whiteColor]];
+    
+    roomListArr = @[@"http://img.qqbody.com/uploads/allimg/201503/2015031310511.jpg",@"http://img.qqbody.com/uploads/allimg/201503/2015031310511.jpg",@"http://img.qqbody.com/uploads/allimg/201503/2015031310511.jpg"];
     
     [self setCustomView];
 }
@@ -40,29 +43,30 @@
         
         //图片
         UIImageView *roomImgV = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, roomBtn.frame.size.width, 120*ScreenHeight/568)];
-        [roomImgV setImageWithURL:[NSURL URLWithString:[[roomListArr objectAtIndex:i] objectForKey:@"LogoUrl"]] placeholderImage:LoadImage(@"placeholder@2x", @"png")];
+//        [roomImgV setImageWithURL:[NSURL URLWithString:[[roomListArr objectAtIndex:i] objectForKey:@"LogoUrl"]] placeholderImage:LoadImage(@"placeholder@2x", @"png")];
+        [roomImgV setImageWithURL:[NSURL URLWithString:[roomListArr objectAtIndex:i]] placeholderImage:LoadImage(@"placeholder@2x", @"png")];
         [roomImgV setBackgroundColor:[UIColor clearColor]];
         [roomImgV setTag:i+20000];
         [roomBtn addSubview:roomImgV];
         
-        //title
-        UILabel *roomTitleLab = [[UILabel alloc] initWithFrame:CGRectMake(0, roomImgV.frame.size.height, roomBtn.frame.size.width, 22*ScreenHeight/568)];
-        [roomTitleLab setText:[[roomListArr objectAtIndex:i] objectForKey:@"MRoomName"]];
-        [roomTitleLab setTextAlignment:NSTextAlignmentLeft];
-        [roomTitleLab setTextColor:[UIColor grayColor]];
-        [roomTitleLab setFont:[UIFont systemFontOfSize:10.0f]];
-        [roomBtn addSubview:roomTitleLab];
+//        //title
+//        UILabel *roomTitleLab = [[UILabel alloc] initWithFrame:CGRectMake(0, roomImgV.frame.size.height, roomBtn.frame.size.width, 22*ScreenHeight/568)];
+//        [roomTitleLab setText:[[roomListArr objectAtIndex:i] objectForKey:@"MRoomName"]];
+//        [roomTitleLab setTextAlignment:NSTextAlignmentLeft];
+//        [roomTitleLab setTextColor:[UIColor grayColor]];
+//        [roomTitleLab setFont:[UIFont systemFontOfSize:10.0f]];
+//        [roomBtn addSubview:roomTitleLab];
         
-        //面积
-        UILabel *roomAreaLabel = [[UILabel alloc] initWithFrame:CGRectMake(roomBtn.frame.size.width - 45*ScreenWidth/320 , roomTitleLab.frame.size.height + roomTitleLab.frame.origin.y, 40*ScreenWidth/320, 20*ScreenHeight/568)];
-        roomAreaLabel.layer.borderColor = [UIColorFromHex(0x60d3c4) CGColor];
-        roomAreaLabel.layer.borderWidth = 0.8f;
-        roomAreaLabel.layer.cornerRadius = 4.0f;
-        [roomAreaLabel setText:[NSString stringWithFormat:@"%@㎡",[[roomListArr objectAtIndex:i] objectForKey:@"Area"]]];
-        [roomAreaLabel setTextAlignment:NSTextAlignmentCenter];
-        [roomAreaLabel setTextColor:[UIColor grayColor]];
-        [roomAreaLabel setFont:[UIFont systemFontOfSize:12.0f]];
-        [roomBtn addSubview:roomAreaLabel];
+//        //面积
+//        UILabel *roomAreaLabel = [[UILabel alloc] initWithFrame:CGRectMake(roomBtn.frame.size.width - 45*ScreenWidth/320 , roomTitleLab.frame.size.height + roomTitleLab.frame.origin.y, 40*ScreenWidth/320, 20*ScreenHeight/568)];
+//        roomAreaLabel.layer.borderColor = [UIColorFromHex(0x60d3c4) CGColor];
+//        roomAreaLabel.layer.borderWidth = 0.8f;
+//        roomAreaLabel.layer.cornerRadius = 4.0f;
+//        [roomAreaLabel setText:[NSString stringWithFormat:@"%@㎡",[[roomListArr objectAtIndex:i] objectForKey:@"Area"]]];
+//        [roomAreaLabel setTextAlignment:NSTextAlignmentCenter];
+//        [roomAreaLabel setTextColor:[UIColor grayColor]];
+//        [roomAreaLabel setFont:[UIFont systemFontOfSize:12.0f]];
+//        [roomBtn addSubview:roomAreaLabel];
         
     }
 

@@ -40,7 +40,7 @@
     UIImageView *headImgV = [[UIImageView alloc] initWithFrame:CGRectMake(75, 65, 75, 75)];
     headImgV.layer.cornerRadius = 37.5f;
     [headImgV.layer setMasksToBounds:YES];
-    [headImgV setImage:LoadImage(@"", @"png")];
+    [headImgV setImage:LoadImage(@"head", @"jpg ")];
     [self.view addSubview:headImgV];
     
     //用户昵称
@@ -127,14 +127,53 @@
 {
     DDMenuController *menuController = (DDMenuController *)((AppDelegate *)[[UIApplication sharedApplication] delegate]).menuController;
     
-    SettingViewController *settingVC = [[SettingViewController alloc] init];
+    [menuController showRootController:YES];
+//    SettingViewController *settingVC = [[SettingViewController alloc] init];
+//    MainViewController *mainVC = [[MainViewController alloc] init];
+//    
+//    CustomNavigationController *navController = [[CustomNavigationController alloc] initWithRootViewController:mainVC];
+////    [navController setToolbarHidden:NO animated:YES];
+//
+//    [menuController setRootController:navController animated:YES];
     
-    CustomNavigationController *navController = [[CustomNavigationController alloc] initWithRootViewController:settingVC];
-//    [navController setToolbarHidden:NO animated:YES];
-
-    [menuController setRootController:navController animated:YES];
+    UIViewController *viewController = nil;
+    switch (indexPath.row) {
+        case 0:
+            NSLog(@"装修档案");
+            break;
+        case 1:
+            NSLog(@"装修日记");
+            break;
+        case 2:
+            NSLog(@"装修计算器");
+            break;
+        case 3:
+            NSLog(@"优惠活动");
+            break;
+        case 4:
+            NSLog(@"积分商城");
+            break;
+        case 5:
+            NSLog(@"投诉建议");
+            break;
+        case 6:
+            NSLog(@"意见反馈");
+            break;
+        case 7:
+            NSLog(@"设置");
+        {
+            SettingViewController *settingVC = [[SettingViewController alloc] init];
+            [settingVC setTitle:@"设置"];
+            viewController = settingVC;
+        }
+            break;
+            
+        default:
+            break;
+    }
     
-
+    NSDictionary *dict =[[NSDictionary alloc] initWithObjectsAndKeys:viewController,@"viewC", nil];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"pushToFunctionVC" object:nil userInfo:dict];
 }
 
 

@@ -19,6 +19,7 @@
     // Do any additional setup after loading the view.
     [self.view setBackgroundColor:[UIColor whiteColor]];
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(push:) name:@"pushToFunctionVC" object:nil];
     
     tmpView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight-50*ScreenHeight/568)];
     [self.view addSubview:tmpView];
@@ -101,14 +102,12 @@
 }
 
 
-
-
-
-
-
-
-
-
+//通知方法
+- (void)push:(NSNotification *)notification{
+    NSLog(@"%@",[notification.userInfo objectForKey:@"viewC"]);
+    NSLog(@"－－－－－接收到通知------");
+    [self.navigationController pushViewController:[notification.userInfo objectForKey:@"viewC"] animated:YES];
+}
 
 
 - (void)didReceiveMemoryWarning {
