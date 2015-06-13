@@ -27,7 +27,7 @@
 #import "DDMenuController.h"
 
 #define kMenuFullWidth ScreenWidth
-#define kMenuDisplayedWidth 180.0f
+#define kMenuDisplayedWidth 280.0f
 #define kMenuOverlayWidth (self.view.bounds.size.width - kMenuDisplayedWidth)
 #define kMenuBounceOffset 10.0f
 #define kMenuBounceDuration .3f
@@ -498,7 +498,7 @@
     [self.leftViewController viewWillAppear:animated];
     
     frame = _root.view.frame;
-    frame.origin.x = CGRectGetMaxX(view.frame) - (kMenuFullWidth - kMenuDisplayedWidth*0.8);
+    frame.origin.x = CGRectGetMaxX(view.frame) - (kMenuFullWidth - kMenuDisplayedWidth);
     
     
     BOOL _enabled = [UIView areAnimationsEnabled];

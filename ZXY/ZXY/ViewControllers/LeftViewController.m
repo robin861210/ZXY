@@ -7,6 +7,8 @@
 //
 
 #import "LeftViewController.h"
+#import "DDMenuController.h"
+#import "SettingViewController.h"
 
 @interface LeftViewController ()
 
@@ -18,24 +20,64 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self.view setBackgroundColor:[UIColor orangeColor]];
+    listIconArray = @[@"center_dec_archives@2x",@"center_dec_diary@2x",@"center_computer@2x",@"center_activity@2x",@"center_score_shop@2x",@"center_give_angry@2x",@"center_advice@2x",@"center_setting@2x"];
+    listNameArray = @[@"装修档案",@"装修日记",@"装修计算器",@"优惠活动",@"积分商城",@"投诉建议",@"意见反馈",@"设置"];
     
-    [self customView];
+    UIImageView *backgImgView = [[UIImageView alloc] initWithFrame:self.view.bounds];
+    [backgImgView setImage:LoadImage(@"center_back@2x", @"png")];
+    [self.view addSubview:backgImgView];
+
+    [self setPersonCenterView];
+    
+    [self setFundutionCustomView];
 }
 
-- (void)customView
+
+//“个人信息”页面
+- (void)setPersonCenterView
 {
-    listTableV = [[UITableView alloc] initWithFrame:CGRectMake(0, 50, 150, ScreenHeight-80) style:UITableViewStylePlain];
-    [listTableV setBackgroundColor:[UIColor blueColor]];
+    //头像
+    UIImageView *headImgV = [[UIImageView alloc] initWithFrame:CGRectMake(75, 65, 75, 75)];
+    headImgV.layer.cornerRadius = 37.5f;
+    [headImgV.layer setMasksToBounds:YES];
+    [headImgV setImage:LoadImage(@"", @"png")];
+    [self.view addSubview:headImgV];
+    
+    //用户昵称
+    UILabel *nickNameLab = [[UILabel alloc] initWithFrame:CGRectMake(155, 90, 130, 20)];
+    [nickNameLab setText:@"Melodo1019"];
+    [nickNameLab setTextColor:[UIColor whiteColor]];
+    [nickNameLab setTextAlignment:NSTextAlignmentLeft];
+    [nickNameLab setFont:[UIFont systemFontOfSize:13.0f]];
+    [self.view addSubview:nickNameLab];
+    
+    //积分
+    UILabel *integralLab = [[UILabel alloc] initWithFrame:CGRectMake(155, 110, 130, 15)];
+    [integralLab setText:@"当前积分：1250 可兑换"];
+    [integralLab setTextColor:[UIColor whiteColor]];
+    [integralLab setTextAlignment:NSTextAlignmentLeft];
+    [integralLab setFont:[UIFont systemFontOfSize:11.0f]];
+    [self.view addSubview:integralLab];
+}
+
+- (void)setFundutionCustomView
+{
+    listTableV = [[UITableView alloc] initWithFrame:CGRectMake(0, 180, 280, ScreenHeight-80) style:UITableViewStylePlain];
+    [listTableV setBackgroundColor:[UIColor clearColor]];
     [listTableV setShowsHorizontalScrollIndicator:NO];
+    [listTableV setScrollEnabled:NO];
+    [listTableV setSeparatorStyle:UITableViewCellSeparatorStyleNone];
     listTableV.delegate = self;
     listTableV.dataSource = self;
-    [listTableV setSeparatorColor:[UIColor clearColor]];
     [self.view addSubview:listTableV];
+
 }
+
+
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 8;
+    return [listNameArray count];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -45,25 +87,58 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *leftCell = @"listCell";
+    static NSString *reuseIdetify = @"listCell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdetify];
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:reuseIdetify];
+        
+        [cell setBackgroundColor:[UIColor clearColor]];
+        
+        //图标
+        UIImageView *iconImageView = [[UIImageView alloc] initWithFrame:CGRectMake(75, 12, 20, 20)];
+        [iconImageView setImage:LoadImage([listIconArray objectAtIndex:indexPath.row], @"png")];
+        [cell addSubview:iconImageView];
+        
+        //功能
+        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(100, 12, 100, 20)];
+        [label setText:[listNameArray objectAtIndex:indexPath.row]];
+        [label setTextColor:[UIColor whiteColor]];
+        [label setTextAlignment:NSTextAlignmentLeft];
+        [label setFont:[UIFont systemFontOfSize:18.0f]];
+        [cell addSubview:label];
+        
+        //箭头
+        UIImageView *arrowImgView = [[UIImageView alloc] initWithFrame:CGRectMake(250, 12, 20, 20)];
+        [arrowImgView setImage:LoadImage(@"center_right@2x", @"png")];
+        [cell addSubview:arrowImgView];
+        
+        //分割线
+        UIImageView *lineImgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 35, 280, 10)];
+        [lineImgView setImage:LoadImage(@"center_diviler@2x", @"png")];
+        [cell addSubview:lineImgView];
+    }
     
-    return nil;
+    cell.textLabel.backgroundColor = [UIColor clearColor];
+    [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
+    return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
 //    DDMenuController *menuController = (DDMenuController *)((AppDelegate *)[[UIApplication sharedApplication] delegate]).menuController;
-    
+//    
 //    RootViewController *selectViewController = [[RootViewController alloc] init];
-    
+//    
 //    LeftMenuInfoBean *bean = [leftInfoArray objectAtIndex:indexPath.row];
 //    [selectViewController setTitle:bean.hotName];
 //    [selectViewController initRootTableViewData:bean.hotId];
 //    
 //    CustomNavigationController *navController = [[CustomNavigationController alloc] initWithRootViewController:selectViewController];
 //    [navController setToolbarHidden:NO animated:YES];
-//    
+//
 //    [menuController setRootController:navController animated:YES];
+    
+
 }
 
 

@@ -11,7 +11,8 @@
 @interface LeftViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
 {
     UITableView *listTableV;
-    
+    NSArray *listIconArray;
+    NSArray *listNameArray;
 }
 
 @end
