@@ -243,6 +243,7 @@
 			isa = PBXGroup;
 			children = (
 				0F84C1711B2AA66100804043 /* ZXY */,
+				B2CEE4BC1B2B221A001376D7 /* Framework */,
 				0F84C18B1B2AA66100804043 /* ZXYTests */,
 				0F84C1701B2AA66100804043 /* Products */,
 			);
@@ -323,6 +324,17 @@
 				0F2952C41B2B13C100E8B524 /* pick_bg@2x.png */,
 				0F2952B21B2AE30500E8B524 /* list_ed@2x.png */,
 				0F2952B31B2AE30500E8B524 /* list@2x.png */,
+				B2CEE3981B2AF1C0001376D7 /* center_activity@2x.png */,
+				B2CEE3991B2AF1C0001376D7 /* center_advice@2x.png */,
+				B2CEE39A1B2AF1C0001376D7 /* center_back@2x.png */,
+				B2CEE39B1B2AF1C0001376D7 /* center_computer@2x.png */,
+				B2CEE39C1B2AF1C0001376D7 /* center_dec_archives@2x.png */,
+				B2CEE39D1B2AF1C0001376D7 /* center_dec_diary@2x.png */,
+				B2CEE39E1B2AF1C0001376D7 /* center_diviler@2x.png */,
+				B2CEE39F1B2AF1C0001376D7 /* center_give_angry@2x.png */,
+				B2CEE3A01B2AF1C0001376D7 /* center_right@2x.png */,
+				B2CEE3A11B2AF1C0001376D7 /* center_score_shop@2x.png */,
+				B2CEE3A21B2AF1C0001376D7 /* center_setting@2x.png */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -379,6 +391,8 @@
 				0F84C1BC1B2AB4DD00804043 /* MainViewController.m */,
 				0F84C1C81B2ACCA300804043 /* LeftViewController.h */,
 				0F84C1C91B2ACCA300804043 /* LeftViewController.m */,
+				B2CEE6CF1B2B3C2F001376D7 /* SettingViewController.h */,
+				B2CEE6D01B2B3C2F001376D7 /* SettingViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -548,10 +562,34 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2CEE6AD1B2B38FF001376D7 /* paizhao.png in Resources */,
+				B2CEE6D91B2BC46C001376D7 /* error.png in Resources */,
+				B2CEE3AD1B2AF1C0001376D7 /* center_setting@2x.png in Resources */,
+				B2CEE6DA1B2BC46C001376D7 /* error@2x.png in Resources */,
+				B2CEE3A51B2AF1C0001376D7 /* center_back@2x.png in Resources */,
+				B2CEE6B51B2B38FF001376D7 /* Contents.json in Resources */,
+				B2CEE3A71B2AF1C0001376D7 /* center_dec_archives@2x.png in Resources */,
+				B2CEE6AF1B2B38FF001376D7 /* Contents.json in Resources */,
+				B2CEE6B71B2B38FF001376D7 /* xiang@2x.png in Resources */,
+				B2CEE3A31B2AF1C0001376D7 /* center_activity@2x.png in Resources */,
+				B2CEE6B11B2B38FF001376D7 /* shanguangdeng@2x.png in Resources */,
+				B2CEE6A91B2B38FF001376D7 /* AssetsPickerChecked@2x.png in Resources */,
+				B2CEE6AE1B2B38FF001376D7 /* paizhao@2x.png in Resources */,
 				0F84C1991B2AAA8A00804043 /* Images.xcassets in Resources */,
 				0F2952BE1B2B131F00E8B524 /* homeed@2x.png in Resources */,
 				0F2952B51B2AE30500E8B524 /* list@2x.png in Resources */,
+				B2CEE6B01B2B38FF001376D7 /* shanguangdeng.png in Resources */,
+				B2CEE6A81B2B38FF001376D7 /* AssetsPickerChecked.png in Resources */,
+				B2CEE6B61B2B38FF001376D7 /* xiang.png in Resources */,
+				B2CEE6DC1B2BC46C001376D7 /* success@2x.png in Resources */,
+				B2CEE3A91B2AF1C0001376D7 /* center_diviler@2x.png in Resources */,
+				B2CEE3A81B2AF1C0001376D7 /* center_dec_diary@2x.png in Resources */,
+				B2CEE3A61B2AF1C0001376D7 /* center_computer@2x.png in Resources */,
+				B2CEE3A41B2AF1C0001376D7 /* center_advice@2x.png in Resources */,
 				0F84C17E1B2AA66100804043 /* Main.storyboard in Resources */,
+				B2CEE6B31B2B38FF001376D7 /* shanguangdeng2.png in Resources */,
+				B2CEE3AC1B2AF1C0001376D7 /* center_score_shop@2x.png in Resources */,
+				B2CEE6DB1B2BC46C001376D7 /* success.png in Resources */,
 				0F84C1831B2AA66100804043 /* LaunchScreen.xib in Resources */,
 				0F2952C11B2B137200E8B524 /* k_zxed@2x.png in Resources */,
 				0F2952C51B2B13C100E8B524 /* line@2x.png in Resources */,
@@ -692,7 +730,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -730,7 +768,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -744,8 +782,9 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PREFIX_HEADER = ZXY/PrefixHeader.pch;
 				INFOPLIST_FILE = ZXY/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -757,8 +796,9 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PREFIX_HEADER = ZXY/PrefixHeader.pch;
 				INFOPLIST_FILE = ZXY/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

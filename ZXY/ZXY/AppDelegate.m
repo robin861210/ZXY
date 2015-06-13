@@ -13,6 +13,8 @@
 @end
 
 @implementation AppDelegate
+@synthesize window = _window;
+@synthesize menuController = _menuController;
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
