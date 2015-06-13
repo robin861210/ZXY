@@ -50,7 +50,7 @@
     }
     
 }
-
+//更新广告数据
 - (void)updateHomeViewData {
     NSMutableArray *AD_InfoArray = [[NSMutableArray alloc] init];
     for (int i = 0;  i < 3; i++) {
@@ -62,12 +62,6 @@
     [adView refreshImage:AD_InfoArray placeHolderImage:@"placeholder@2x"];
 }
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-}
-*/
+
 
 @end

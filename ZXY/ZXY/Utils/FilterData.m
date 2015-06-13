@@ -21,7 +21,9 @@
                 [tmpDic setValue:@"" forKey:key];
             }
         }
+        
         [filterArray addObject:tmpDic];
+        
     }
     
     return filterArray;

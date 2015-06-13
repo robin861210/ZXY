@@ -32,7 +32,7 @@
     else {
         image = [[UIImage alloc] initWithData:data];
         
-        if (data.length/1024 > 1024) {
+        if (data.length/1024 > 512) {
             image = [self compressImageWith:image];
         }
         

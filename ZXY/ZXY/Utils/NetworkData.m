@@ -43,7 +43,7 @@ Class object_getClass(id object);
     
 }
 
-/**
+/*
  初始化HTTP
  */
 - (void)httpInit

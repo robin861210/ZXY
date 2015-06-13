@@ -42,7 +42,7 @@
         timer = [NSTimer scheduledTimerWithTimeInterval:8.0f target:self selector:@selector(timerOutSlot) userInfo:nil repeats:YES];
         [self stopTimerAnimation];
         
-        self.type = 3;
+        self.type = 3; 
         
     }
     return self;

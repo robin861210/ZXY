@@ -22,9 +22,9 @@
     ADCustomView *adView;
     float viewHeight;
     NSArray *funTitleArray,*funImgArray;
-    
-    MRProgressOverlayView *progressView;
-    NetworkInterface *interface;
+//    
+//    MRProgressOverlayView *progressView;
+//    NetworkInterface *interface;
     
     UIButton *introductionBtn,*productBtn,*serviceBtn;
 }

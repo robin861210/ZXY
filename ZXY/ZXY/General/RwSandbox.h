@@ -33,6 +33,6 @@
 + (NSString *) getCurrentTimeStamp;
 
 //MD5加密
-+(NSString *) md5: (NSString *) inPutText ;
++(NSString *) md5:(NSString *) inPutText ;
 
 @end

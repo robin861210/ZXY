@@ -23,6 +23,7 @@
     
     UILabel *numLab;
 }
+
 @property (nonatomic,strong) UILabel *numLab;
 @property (nonatomic,assign) id <TabBarViewDelegate> delegate;
 
@@ -34,3 +35,4 @@
 - (void)setNumOfChatView:(NSString *)num;
 
 @end
+

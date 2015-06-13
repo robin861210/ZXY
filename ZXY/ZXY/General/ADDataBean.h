@@ -11,6 +11,7 @@
 @interface ADDataBean : NSObject
 
 @property (nonatomic, retain) NSString *ad_id;
+
 @property (nonatomic, retain) NSString *ad_image;
 @property (nonatomic, retain) NSString *ad_info;
 @property (assign) BOOL ad_image_flag;

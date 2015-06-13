@@ -28,6 +28,7 @@
 	// Do any additional setup after loading the view.
     
     [[UINavigationBar appearance] setBackgroundImage:LoadImage(@"topnav_bg_new@2x", @"png") forBarMetrics:UIBarMetricsDefault];
+    
 //    [[UINavigationBar appearance] setBackgroundImage:LoadImage(@"topnav_bg_old@2x", @"png") forBarMetrics:UIBarMetricsDefault];
 
 }

@@ -18,7 +18,7 @@
 }
 
 //读取程序沙盒文件
-+ (NSMutableDictionary *) readPropertyFile:(NSString *) filePath
++ (NSMutableDictionary *)readPropertyFile:(NSString *) filePath
 {
     NSMutableDictionary *contentDic = [[NSMutableDictionary alloc] initWithContentsOfFile:filePath];
     return contentDic;
@@ -52,7 +52,7 @@
 }
 
 //MD5加密
-+(NSString *) md5: (NSString *) inPutText
++(NSString *)md5:(NSString *) inPutText
 {
     const char *cStr = [inPutText UTF8String];
     unsigned char result[CC_MD5_DIGEST_LENGTH];

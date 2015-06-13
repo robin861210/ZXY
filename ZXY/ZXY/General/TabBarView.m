@@ -102,14 +102,7 @@
     [self.numLab setTextAlignment:NSTextAlignmentCenter];
     [self.numLab setFont:[UIFont boldSystemFontOfSize:15.0f]];
     [chatViewBtn addSubview:self.numLab];
+    
 }
-
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-}
-*/
 
 @end

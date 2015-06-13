@@ -64,7 +64,7 @@ typedef void (^Failed)(NSString *state, NSString *errmsg);
 - (void)uploadFileURL:(NSString *)aUrl filePath:(NSString *)aPath keyName:(NSString *)aKeyName params:(NSDictionary *)params;
 
 
-/**
+/*
  取消请求
  */
 - (void)cancel;
@@ -75,12 +75,12 @@ typedef void (^Failed)(NSString *state, NSString *errmsg);
 @protocol NetworkDataDelegate <NSObject>
 @optional
 
-/**
+/*
  请求完成时-调用
  */
 - (void)getFinished:(NSDictionary *)msg tag:(NSInteger)tag;
 
-/**
+/*
  请求失败时-调用
  */
 - (void)getError:(NSDictionary *)msg tag:(NSInteger)tag;

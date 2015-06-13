@@ -36,7 +36,7 @@ typedef enum _DisplayModel
 
 @property (nonatomic, retain) id<ADCustomViewDelegate> delegate;
 
-/* 
+/* m
  refresh Data for Ad View 
  */
 - (void)refreshImage:(NSArray *)infoArray

@@ -46,32 +46,32 @@
 }
 
 - (IBAction)searchBtClicked:(id)sender {
-    NSLog(@"~~~  点击了WebViewController 中的分享按钮 ~~~");
-    [UMSocialSnsService presentSnsIconSheetView:self
-                                         appKey:UmengKey
-                                      shareText:self.shareText
-                                     shareImage:[self loadWebImage:self.shareLogoImg]
-                                shareToSnsNames:[NSArray arrayWithObjects:UMShareToSina,UMShareToTencent,UMShareToWechatSession,UMShareToWechatTimeline,UMShareToQzone,UMShareToQQ,nil]
-                                       delegate:self];
-    [UMSocialData defaultData].extConfig.wechatSessionData.title = @"";
-    [UMSocialData defaultData].extConfig.wechatSessionData.url = self.shareUrl;
-    [UMSocialData defaultData].extConfig.qqData.title = @"";
-    [UMSocialData defaultData].extConfig.qqData.url = self.shareUrl;
+//    NSLog(@"~~~  点击了WebViewController 中的分享按钮 ~~~");
+//    [UMSocialSnsService presentSnsIconSheetView:self
+//                                         appKey:UmengKey
+//                                      shareText:self.shareText
+//                                     shareImage:[self loadWebImage:self.shareLogoImg]
+//                                shareToSnsNames:[NSArray arrayWithObjects:UMShareToSina,UMShareToTencent,UMShareToWechatSession,UMShareToWechatTimeline,UMShareToQzone,UMShareToQQ,nil]
+//                                       delegate:self];
+//    [UMSocialData defaultData].extConfig.wechatSessionData.title = @"";
+//    [UMSocialData defaultData].extConfig.wechatSessionData.url = self.shareUrl;
+//    [UMSocialData defaultData].extConfig.qqData.title = @"";
+//    [UMSocialData defaultData].extConfig.qqData.url = self.shareUrl;
 }
 
 #pragma mark--
 #pragma 分享统计
 //实现回调方法（可选）：
--(void)didFinishGetUMSocialDataInViewController:(UMSocialResponseEntity *)response
-{
-    //根据`responseCode`得到发送结果,如果分享成功
-    if(response.responseCode == UMSResponseCodeSuccess)
-    {
-        //得到分享到的微博平台名
-        NSLog(@"share to sns name is %@",[[response.data allKeys] objectAtIndex:0]);
-        
-    }
-}
+//-(void)didFinishGetUMSocialDataInViewController:(UMSocialResponseEntity *)response
+//{
+//    //根据`responseCode`得到发送结果,如果分享成功
+//    if(response.responseCode == UMSResponseCodeSuccess)
+//    {
+//        //得到分享到的微博平台名
+//        NSLog(@"share to sns name is %@",[[response.data allKeys] objectAtIndex:0]);
+//        
+//    }
+//}
 
 - (UIImage *)loadWebImage:(NSString *)imageUrlPath
 {

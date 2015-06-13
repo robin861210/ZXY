@@ -17,6 +17,7 @@ typedef NS_ENUM(NSUInteger, requstType) {
 @interface NetworkInterface : NSObject<NetworkDataDelegate>
 {
     NetworkData *networkData;
+    
 }
 
 @property(nonatomic,unsafe_unretained) id target;

@@ -46,6 +46,7 @@
     if (self = [super initWithFrame:frame]) {
         _numberOfStars = numberOfStars;
         [self buildDataAndUI];
+        
     }
     return self;
 }

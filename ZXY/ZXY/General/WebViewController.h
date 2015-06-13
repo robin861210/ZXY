@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "UMSocial.h"
+//#import "UMSocial.h"
 
-@interface WebViewController : UIViewController<UIWebViewDelegate,UMSocialUIDelegate,UMSocialDataDelegate>
+@interface WebViewController : UIViewController<UIWebViewDelegate/*,UMSocialUIDelegate,UMSocialDataDelegate*/>
 {
     UIWebView *webView;
 }
