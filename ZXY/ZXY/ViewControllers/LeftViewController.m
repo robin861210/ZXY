@@ -62,13 +62,15 @@
 
 - (void)setFundutionCustomView
 {
-//    listTableV = [[UITableView alloc] initWithFrame:CGRectMake(0, 50, 150, ScreenHeight-80) style:UITableViewStylePlain];
-//    [listTableV setBackgroundColor:[UIColor blueColor]];
-//    [listTableV setShowsHorizontalScrollIndicator:NO];
-//    listTableV.delegate = self;
-//    listTableV.dataSource = self;
-//    [listTableV setSeparatorColor:[UIColor clearColor]];
-//    [self.view addSubview:listTableV];
+    listTableV = [[UITableView alloc] initWithFrame:CGRectMake(0, 180, 280, ScreenHeight-80) style:UITableViewStylePlain];
+    [listTableV setBackgroundColor:[UIColor clearColor]];
+    [listTableV setShowsHorizontalScrollIndicator:NO];
+    [listTableV setScrollEnabled:NO];
+    [listTableV setSeparatorStyle:UITableViewCellSeparatorStyleNone];
+    listTableV.delegate = self;
+    listTableV.dataSource = self;
+    [self.view addSubview:listTableV];
+
 }
 
 
