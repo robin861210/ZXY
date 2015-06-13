@@ -65,6 +65,8 @@
 		0FD991E61B2BD8EE00D1A902 /* FilterData.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FD991E01B2BD8EE00D1A902 /* FilterData.m */; };
 		0FD991E71B2BD8EE00D1A902 /* NetworkData.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FD991E21B2BD8EE00D1A902 /* NetworkData.m */; };
 		0FD991E81B2BD8EE00D1A902 /* NetworkInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FD991E41B2BD8EE00D1A902 /* NetworkInterface.m */; };
+		0FD991F11B2C035F00D1A902 /* KanZXView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FD991F01B2C035F00D1A902 /* KanZXView.m */; };
+		0FD991F41B2C038200D1A902 /* XueZXView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FD991F31B2C038200D1A902 /* XueZXView.m */; };
 		B2CEE3A31B2AF1C0001376D7 /* center_activity@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B2CEE3981B2AF1C0001376D7 /* center_activity@2x.png */; };
 		B2CEE3A41B2AF1C0001376D7 /* center_advice@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B2CEE3991B2AF1C0001376D7 /* center_advice@2x.png */; };
 		B2CEE3A51B2AF1C0001376D7 /* center_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B2CEE39A1B2AF1C0001376D7 /* center_back@2x.png */; };
@@ -262,6 +264,10 @@
 		0FD991E31B2BD8EE00D1A902 /* NetworkInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkInterface.h; sourceTree = "<group>"; };
 		0FD991E41B2BD8EE00D1A902 /* NetworkInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkInterface.m; sourceTree = "<group>"; };
 		0FD991E51B2BD8EE00D1A902 /* ServerURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerURL.h; sourceTree = "<group>"; };
+		0FD991EF1B2C035F00D1A902 /* KanZXView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KanZXView.h; sourceTree = "<group>"; };
+		0FD991F01B2C035F00D1A902 /* KanZXView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KanZXView.m; sourceTree = "<group>"; };
+		0FD991F21B2C038200D1A902 /* XueZXView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XueZXView.h; sourceTree = "<group>"; };
+		0FD991F31B2C038200D1A902 /* XueZXView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XueZXView.m; sourceTree = "<group>"; };
 		B2CEE3981B2AF1C0001376D7 /* center_activity@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "center_activity@2x.png"; sourceTree = "<group>"; };
 		B2CEE3991B2AF1C0001376D7 /* center_advice@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "center_advice@2x.png"; sourceTree = "<group>"; };
 		B2CEE39A1B2AF1C0001376D7 /* center_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "center_back@2x.png"; sourceTree = "<group>"; };
@@ -570,6 +576,10 @@
 			children = (
 				0FD991901B2BD1D600D1A902 /* HomeView.h */,
 				0FD991911B2BD1D600D1A902 /* HomeView.m */,
+				0FD991EF1B2C035F00D1A902 /* KanZXView.h */,
+				0FD991F01B2C035F00D1A902 /* KanZXView.m */,
+				0FD991F21B2C038200D1A902 /* XueZXView.h */,
+				0FD991F31B2C038200D1A902 /* XueZXView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1109,7 +1119,9 @@
 				0FD991791B2BD19700D1A902 /* MJPhotoProgressView.m in Sources */,
 				B2CEE6C31B2B38FF001376D7 /* ZLPickerViewController.m in Sources */,
 				B2CEE69D1B2B38FF001376D7 /* SDWebImageDownloaderOperation.m in Sources */,
+				0FD991F11B2C035F00D1A902 /* KanZXView.m in Sources */,
 				B2CEE6C01B2B38FF001376D7 /* ZLNavigationController.m in Sources */,
+				0FD991F41B2C038200D1A902 /* XueZXView.m in Sources */,
 				B2CEE6CD1B2B38FF001376D7 /* ZLPickerBrowserPhotoImageView.m in Sources */,
 				B2CEE6BD1B2B38FF001376D7 /* ZLCameraViewController.m in Sources */,
 				0FD991DB1B2BD65F00D1A902 /* UIProgressView+AFNetworking.m in Sources */,

@@ -19,21 +19,29 @@
     // Do any additional setup after loading the view.
     [self.view setBackgroundColor:[UIColor whiteColor]];
     
+    if ([UIDevice currentDevice].systemVersion.floatValue >= 7) {
+        self.edgesForExtendedLayout = UIRectEdgeNone;
+    }
     
-    tmpView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight-50*ScreenHeight/568)];
+    tmpView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight-50-64*ScreenHeight/568)];
     [self.view addSubview:tmpView];
     
-    CGRect subViewFrame = CGRectMake(0, 0, ScreenWidth, ScreenHeight-50*ScreenHeight/568);
+    CGRect subViewFrame = CGRectMake(0, 0, ScreenWidth, ScreenHeight-50-64*ScreenHeight/568);
+    //首页
     homeView = [[HomeView alloc] initWithFrame:subViewFrame];
-//    [homeView setDelegate:self];
-    
+    [homeView setDelegate:self];
     [tmpView addSubview:homeView];
+    //看装修
+    kanZXView = [[KanZXView alloc] initWithFrame:subViewFrame];
+    //沟通界面
+    //学装修
+    xueZXView = [[XueZXView alloc] initWithFrame:subViewFrame];
     
     //初始化下方工具栏
     tabArray = @[@"首页",@"看装修",@"在线沟通",@"学装修"];
     NSArray *tabImgNorArray = @[@"home@2x",@"k_zx@2x",@"tack@2x",@"x_zx@2x"];
     NSArray *tabImgSelArray = @[@"homeed@2x",@"k_zxed@2x",@"tacked@2x",@"x_zxed@2x"];
-    tabBarView = [[TabBarView alloc] initWithFrame:CGRectMake(0, ScreenHeight-50*ScreenHeight/568, ScreenWidth, 50*ScreenHeight/568) tabBarInfo:tabArray normalImageArr:tabImgNorArray selectImageArr:tabImgSelArray];
+    tabBarView = [[TabBarView alloc] initWithFrame:CGRectMake(0, ScreenHeight-50-64*ScreenHeight/568, ScreenWidth, 50*ScreenHeight/568) tabBarInfo:tabArray normalImageArr:tabImgNorArray selectImageArr:tabImgSelArray];
     tabBarView.layer.borderWidth = 0.5f;
     tabBarView.layer.borderColor = [[UIColor grayColor] CGColor];
     [tabBarView setBackgroundColor:[UIColor whiteColor]];
@@ -55,7 +63,7 @@
 //            [logOutBtn setHidden:YES];
             break;
         case 1:
-//            [tmpView addSubview:activityView];
+            [tmpView addSubview:kanZXView];
 //            [activityView updateViewInfo:0 Num:0];
 //            [logOutBtn setHidden:YES];
             break;
@@ -65,18 +73,9 @@
 //            self.navigationItem.rightBarButtonItem = contactsItem;
             break;
         case 3:
-//            [tmpView addSubview:progressSearchView];
+            [tmpView addSubview:xueZXView];
 //            [progressSearchView setProgressBaseInfo];
 //            [logOutBtn setHidden:YES];
-            break;
-        case 4:
-//            [tmpView addSubview:personCenterView];
-//            if ([[UserInfoUtils sharedUserInfoUtils] isEmpty]) {
-//                [logOutBtn setHidden:YES];
-//            }else
-//            {
-//                [logOutBtn setHidden:NO];
-//            }
             break;
         default:
             break;
