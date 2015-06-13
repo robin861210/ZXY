@@ -125,18 +125,14 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-//    DDMenuController *menuController = (DDMenuController *)((AppDelegate *)[[UIApplication sharedApplication] delegate]).menuController;
-//    
-//    RootViewController *selectViewController = [[RootViewController alloc] init];
-//    
-//    LeftMenuInfoBean *bean = [leftInfoArray objectAtIndex:indexPath.row];
-//    [selectViewController setTitle:bean.hotName];
-//    [selectViewController initRootTableViewData:bean.hotId];
-//    
-//    CustomNavigationController *navController = [[CustomNavigationController alloc] initWithRootViewController:selectViewController];
+    DDMenuController *menuController = (DDMenuController *)((AppDelegate *)[[UIApplication sharedApplication] delegate]).menuController;
+    
+    SettingViewController *settingVC = [[SettingViewController alloc] init];
+    
+    CustomNavigationController *navController = [[CustomNavigationController alloc] initWithRootViewController:settingVC];
 //    [navController setToolbarHidden:NO animated:YES];
-//
-//    [menuController setRootController:navController animated:YES];
+
+    [menuController setRootController:navController animated:YES];
     
 
 }
