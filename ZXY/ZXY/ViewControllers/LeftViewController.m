@@ -24,7 +24,7 @@
     listNameArray = @[@"装修档案",@"装修日记",@"装修计算器",@"优惠活动",@"积分商城",@"投诉建议",@"意见反馈",@"设置"];
     
     UIImageView *backgImgView = [[UIImageView alloc] initWithFrame:self.view.bounds];
-    [backgImgView setImage:LoadImage(@"center_back@2x", @"png")];
+    [backgImgView setImage:LoadImage(@"center_back@3x", @"png")];
     [self.view addSubview:backgImgView];
 
     [self setPersonCenterView];
@@ -125,18 +125,14 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-//    DDMenuController *menuController = (DDMenuController *)((AppDelegate *)[[UIApplication sharedApplication] delegate]).menuController;
-//    
-//    RootViewController *selectViewController = [[RootViewController alloc] init];
-//    
-//    LeftMenuInfoBean *bean = [leftInfoArray objectAtIndex:indexPath.row];
-//    [selectViewController setTitle:bean.hotName];
-//    [selectViewController initRootTableViewData:bean.hotId];
-//    
-//    CustomNavigationController *navController = [[CustomNavigationController alloc] initWithRootViewController:selectViewController];
+    DDMenuController *menuController = (DDMenuController *)((AppDelegate *)[[UIApplication sharedApplication] delegate]).menuController;
+    
+    SettingViewController *settingVC = [[SettingViewController alloc] init];
+    
+    CustomNavigationController *navController = [[CustomNavigationController alloc] initWithRootViewController:settingVC];
 //    [navController setToolbarHidden:NO animated:YES];
-//
-//    [menuController setRootController:navController animated:YES];
+
+    [menuController setRootController:navController animated:YES];
     
 
 }
