@@ -34,7 +34,7 @@
 #pragma mark Crear ADView and Delegate
 - (void) creatADView
 {
-    adView = [[ADCustomView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 125*ScreenHeight/568)];
+    adView = [[ADCustomView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth,125*ScreenHeight/568)];
     adView.delegate = self;
     [adView setType:left_Circle];
     [self addSubview:adView];

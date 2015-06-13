@@ -10,7 +10,7 @@
 #define ZXY_PrefixHeader_pch
 
 #import "ServerURL.h"
-
+#import "NetworkInterface.h"
 
 
 

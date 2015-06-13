@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "TabBarView.h"
 #import "HomeView.h"
+#import "KanZXView.h"
+#import "XueZXView.h"
 
 @interface MainViewController : UIViewController<TabBarViewDelegate,HomeDelegate>
 {
@@ -17,6 +19,8 @@
     NSArray *tabArray;
     
     HomeView *homeView;
+    KanZXView *kanZXView;
+    XueZXView *xueZXView;
     
     NSInteger switchIndex;
 }
